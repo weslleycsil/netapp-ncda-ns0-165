@@ -1,0 +1,110 @@
+site_name: NCDA NS0-165
+site_description: Guia de estudos para a certificação NetApp Certified Data Administrator
+site_author: Weslley Silva
+site_url: https://infra.expert/netapp-ncda-ns0-165/
+
+# Repository
+repo_name: weslleycsil/netapp-ncda-ns0-165
+repo_url: https://github.com/weslleycsil/netapp-ncda-ns0-165
+
+# Copyright
+copyright: Weslley Silva &copy; 2025
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - mermaid2
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: pt-BR
+          default: true
+          name: Português
+          build: true
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/weslleycsil
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/weslleycsil
+  #alternate:
+  #  - name: Português
+  #    link: /ns0-165/pt
+  #    lang: pt-BR
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Início: index.md
+  - Plano de estudos:
+      - Visão geral: plano-estudos.md
+      - Checklist: checklist.md
+  - Fundamentos ONTAP:
+      - Arquitetura: fundamentos/arquitetura-ontap.md
+      - SVM e multitenancy: fundamentos/svm.md
+      - WAFL: fundamentos/wafl.md
+  - Storage:
+      - Aggregates, Volumes e LUNs: storage/aggregates-volumes-luns.md
+      - FlexVol x FlexGroup: storage/flexvol-flexgroup.md
+      - RAID, root e local tier: storage/raid-root-local-tier.md
+  - Networking:
+      - LIFs: networking/lifs.md
+      - IPspace, Broadcast Domain e Failover: networking/ipspace-broadcast-failover.md
+      - Cluster network: networking/cluster-network.md
+  - Proteção de dados:
+      - Snapshots: protecao/snapshots.md
+      - SnapMirror e SnapVault: protecao/snapmirror-snapvault.md
+  - Operações:
+      - Comandos úteis: operacoes/comandos-uteis.md
+      - Troubleshooting e revisão: operacoes/troubleshooting-revisao.md
+  - Anexos:
+      - Glossário: anexos/glossario.md
+      - Perguntas rápidas: anexos/perguntas-rapidas.md
